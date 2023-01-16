@@ -1,0 +1,44 @@
+* pwd                                   --> Current working directly
+* ctrl + d                              --> To stop any execution
+* clear                                 --> Clear Terminal
+* /                                     --> Home directly
+* ctrl + alt + t                        --> To open terminal
+* cd                                    --> Change Directly, without any option, means going to start diectory
+* ls [options]  [folder]                --> content in current file
+      -ls /home/dell                    --> To see the contents of directories in hirarcory
+      -ls ~                             --> To see the contents of home directory
+      -ls ..                            --> To see the contents of previous directory
+      -ls ../..                         --> To see the contents of two previous directory
+      -ls -l                            --> To see the details of contents(in long format) of two previous directory
+      -ls -a                            --> To see the hidden files in a directory
+      -ls -a                            --> To see the hidden and other files in a directory in long format
+      -ls -lS                           --> To see the contents of directory in sorted order (sorted by the size of the file)
+      -ls -lt                           --> To see the contents of directory in sorted order (sorted by the creation date of the file)
+      -ls -lt                           --> To see the contents of directory in sorted order (sorted by the reverse of creation date of the file)
+      -ls -lS > out.txt                  --> To store the result of -lS command in a file with name out.txt
+      -ls home/*.html                   --> To see only the html files in the home directory
+      -ls -R                            --> To see hirarcy of files
+
+* cat text1.txt                         --> To show the content of a file
+      - cat text1.txt text2.txt         --> To show the content of a file1 and file2
+      - cat -b text1.txt                --> To show the content of a file and -b add line number before each line where data is present in output
+      - cat -n text1.txt                --> To show the content of a file and -n add line number before each line where data is present or not in output
+      - cat -s text1.txt                --> To change more than spaces between the lines to a single line
+      - cat -E text1.txt                --> To place $ sign at the end of each line to show end of line
+      - cat > text1.txt                                     --> text1.txt will be created and data you enter from command line will be saved in this file (if file already exist, data will be erased and new data will be saved)
+      - cat >> text1.txt                                    --> text1.txt will be created and data you enter from command line will be saved in this file (if file already exist, data will be append and old data will be saved)
+      - cat text1.txt text2.txt >> text3.txt                --> text1.txt and text2.txt data will be saved in text3.txt file (if file does not exist, file will be created)
+      - cat text1.txt >> text2.txt                          --> text1.txt will be saved into the text2.txt data 
+* mkdir iqbal                            --> To create new directory
+      - mkdir iqbal/afzal                --> To create new directory with name 'afzal' if iqbal directory exist else an error will be created
+      - mkdir -p iqbal/afzal             --> To create a directory hirarcy, parent with name 'iqbal' and child 'afzal'
+      - mkdir -p iqbal/{afzal,qaisrani}  --> To create a directory hirarcy, parent with name 'iqbal' and child 'afzal' and 'qaisrani' (space between the child files is not allowed)
+* rmdir iqbal                            --> To delete iqbal directory (rmdir is useful only if dic is empty, it is not useful for dir that have files)
+      - rmdir iqbal/afzal                --> To delete afzal directory 
+      - rmdir -p iqbal/afzal             --> To delete both afzal and iqbal directory both
+      - rmdir -p iqbal/{afzal,qaisrani}  --> To delete a directory hirarcy, child 'afzal' and 'qaisrani' (space between the child files is not allowed)
+* rm -r iqbal                            --> To delete iqbal directory and all its sub directories whether dir have files in it or not
+* cp out1.txt iqbal                      --> To copy out1.txt to iqbal directory
+      - cp out1.txt out2.txt afzal       --> To copy out1.txt and out2.txt to afzal directory
+      - cp -i out1.txt afzal             --> If out1.txt exists in afzal, before overriding system will ask to override due to -i
+      - rmdir -R iqbal afzal             --> To copy all contents of iqbal to afzal
